@@ -22,24 +22,24 @@ public class BlogPost extends Model implements Serializable {
 
     @NotNull
     @Length(min = 12,max = 256)
-    String title;
+    private String title;
 
     @NotNull
     @Length(min = 4, max = 64)
-    String author;
+    private String author;
 
     @NotNull
     @Length(min = 48, max = 2048)
-    String text;
+    private String text;
 
     @NotNull
-    String image;
+    private String image;
 
     @NotNull
     @ManyToMany
-    List<Tag> tags;
+    private List<Tag> tags;
 
     @NotNull
     @ColumnDefault("false")
-    Boolean status;
+    private Boolean status;
 }
