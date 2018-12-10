@@ -3,6 +3,8 @@ package com.darko.danchev.simple.blogging.SimpleBlogging.model;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
@@ -11,6 +13,7 @@ import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.Calendar;
 
+@EqualsAndHashCode
 @MappedSuperclass
 @Data
 public abstract class Model {

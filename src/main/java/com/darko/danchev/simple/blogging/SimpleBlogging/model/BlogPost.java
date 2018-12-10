@@ -1,0 +1,45 @@
+package com.darko.danchev.simple.blogging.SimpleBlogging.model;
+
+import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.validator.constraints.Length;
+
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import java.io.Serializable;
+import java.util.List;
+
+@EqualsAndHashCode(callSuper = false)
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "blog_posts")
+@Entity
+public class BlogPost extends Model implements Serializable {
+
+    @NotNull
+    @Length(min = 12,max = 256)
+    String title;
+
+    @NotNull
+    @Length(min = 4, max = 64)
+    String author;
+
+    @NotNull
+    @Length(min = 48, max = 2048)
+    String text;
+
+    @NotNull
+    String image;
+
+    @NotNull
+    @ManyToMany
+    List<Tag> tags;
+
+    @NotNull
+    @ColumnDefault("false")
+    Boolean status;
+}
