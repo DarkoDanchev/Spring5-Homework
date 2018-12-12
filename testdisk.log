@@ -1,0 +1,22 @@
+
+
+Tue Dec 11 16:02:41 2018
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.15.0-20-generic (#21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018) x86_64
+Compiler: GCC 7.2
+ext2fs lib: 1.44.1, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       976773168 sectors
+/dev/sda: user_max   976773168 sectors
+/dev/sda: native_max 976773168 sectors
+/dev/sda: dco        976773168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 500 GB / 465 GiB - CHS 60801 255 63, sector size=512 - Samsung SSD 860 EVO 500GB, S/N:S3Z2NB0KA65732W, FW:RVT01B6Q
+Disk /dev/sr1 - 2721 KB / 2658 KiB - 1329 sectors (RO), sector size=2048 - Linux File-CD Gadget, FW:0404
+
+SIGHUP detected! TestDisk has been killed.

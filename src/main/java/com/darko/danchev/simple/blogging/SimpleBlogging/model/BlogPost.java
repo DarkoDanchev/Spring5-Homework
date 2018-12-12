@@ -9,6 +9,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @EqualsAndHashCode(callSuper = false)
@@ -42,4 +43,11 @@ public class BlogPost extends Model implements Serializable {
     @NotNull
     @ColumnDefault("false")
     private Boolean status;
+
+    public void addTag(Tag tag){
+        if(tags == null){
+            tags = new ArrayList<>();
+        }
+        tags.add(tag);
+    }
 }

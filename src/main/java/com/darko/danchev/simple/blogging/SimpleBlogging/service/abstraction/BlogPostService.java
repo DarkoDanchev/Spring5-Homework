@@ -12,11 +12,11 @@ public interface BlogPostService {
 
     List<BlogPost> allBlogPosts(Pageable pageable);
 
-    List<BlogPost> findBlogPostsFiltered(); // it returns the first 15 blog posts filtered by status sorted by createdAt
+    List<BlogPost> findBlogPostsFiltered(Boolean status,Pageable pageable); // it returns the first 15 blog posts filtered by status sorted by createdAt
 
     BlogPost findBlogPost(Long blogPostId);
 
     BlogPost updateBlogPost(Long blogPostId, BlogPostDto blogPostDto);
 
-    BlogPost deleteBlogPost(Long blogPostId);
+    Boolean deleteBlogPost(Long blogPostId);
 }
