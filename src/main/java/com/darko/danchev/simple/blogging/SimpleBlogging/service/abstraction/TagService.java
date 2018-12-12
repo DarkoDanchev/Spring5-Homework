@@ -13,11 +13,11 @@ public interface TagService {
 
     List<Tag> allTags(Pageable pageable);
 
-    List<Tag> allTagsInBlogPost(BlogPost blogPost,Pageable pageable);
+    List<Tag> allTagsInBlogPost(BlogPost blogPost);
 
     Tag findTag(Long tagId);
 
     Tag updateTag(Long tagId,TagDto tagDto);
 
-    Tag deleteTag(Long tagId);
+    Boolean deleteTag(Long tagId);
 }
